@@ -89,7 +89,7 @@ class Booking {
             this.btnCancel.show();
     
             // On click focus on set station and cancel button
-            this.station.click(() => { map.setCenter(sideMenu.setStation.position); map.setZoom(16); });
+            this.station.click(() => { stationsMap.map.setCenter(sideMenu.setStation.position); stationsMap.map.setZoom(16); });
             this.btnCancel.click(() => { this.cancelBook(); sessionStorage.clear(); });
     
             // ===== TIMER =====
