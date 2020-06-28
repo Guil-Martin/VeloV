@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Vélo'v Lyon - Location velo</title>
+        <meta charset="utf-8" />
+        <meta name="description"    content="Vélo'V, site de location de vélos sur Lyon" />
+		<meta name="viewport"       content="width=device-width, initial-scale=1"> 
+        <meta property="og:title"   content="Vélo'v Lyon - Location velo" />
+        <meta property="og:type"    content="website" />
+        <meta property="og:url"     content="http://velov.lyon.ocgm-webagency.com/" />
+        <meta property="og:image"   content="img/logo-velov.png" />
+	</head>
+	<body>
+		
+		<header> <!-- 10% -->
+			
+			<div id="logoBox">
+				<a href="index.html">
+					<img src="img/logo-velov.png" alt="Velo'V">
+				</a>
+			</div>
+			<div id="logoLyonBox">
+				<a href="https://www.grandlyon.com">
+					<img src="img/logo-grandlyon.png" alt="Grand Lyon">
+				</a>
+			</div>
+
+		</header>
+
+		<div id="sideMenuWrapper">
+			<div id="sideMenu">
+				<a id="sideMenuClose">&#10094;</a>
+				<div id="nameAdressWrapper">
+					<div id="stationName">Nom station</div>
+					<div id="stationAddress">Adresse</div>
+				</div>
+				<div id="stationStatus">Status</div>
+				<div id="stationStandsInfoWrapper">
+					<div id="stationStandsImgWrapper">
+						<img src="img/standIconMini.png" alt="Places disponibles" title="Places disponibles">
+						<img src="img/bikeIconMini.png" alt="Vélos disponibles" title="Vélos disponibles">
+					</div>
+					<div id="stationStandsWrapper">
+						<div id="stationStandsFree">Places disponibles</div>
+						<div id="stationBikeFree">Vélo disponibles</div>
+					</div>
+				</div>
+				<div id="stationButtonWrapper">
+					<div id="bookError"></div>
+					<div id="signBox">
+						<form id="bookNameBox">
+							<div>
+								<label for="sideMenuFirstname">Prénom </label><br>
+								<input type="text" id="sideMenuFirstname" name="sideMenuFirstname"><br>
+							</div>
+							<div>
+								<label for="sideMenuLastname">Nom </label><br>
+								<input type="text" id="sideMenuLastname" name="sideMenuLastname"><br>
+							</div>
+						</form>
+						<canvas id="signCanvas"></canvas>
+						<div id="signBtnBox">
+							<button id="validBtn" alt="Bouton valider">&#10004;</button>
+							<button id="closeBtn" alt="Bouton annuler">&#10799;</button>
+						</div>
+					</div>
+					<button id="stationButton">Réserver</button>
+				</div>
+			</div>
+		</div>
+
+		<section id="slideshowBox"> <!-- 35% -->
+
+			<div class="slideshow-container">
+				<div class="slideshow-buttons">
+					<button class="prev">&#10094;</button>
+					<button class="pause">&#10074;</button>
+					<button class="next">&#10095;</button>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="mapWrapper"> <!-- 45% -->
+
+			<div id="mapBox"></div>
+
+		</section>
+
+		<footer> <!-- 10% -->
+			
+			<div id="bookedBox">
+				<p>Réservation : </p>
+				<div id="bookedStation">Aucune</div>
+				<div id="bookedTimer"></div>
+				<div id="bookedBarBox">
+					<div id="bookedBar">
+						<div id="bookedBarProgress"></div>
+					</div>
+					<button id="bookedCancel" alt="Annuler réservation">&#10799;</button>
+				</div>
+			</div>
+			<p>©Openclassrooms - GM</p>
+
+		</footer>
+
+		<script src="js/jQuery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+		<script src="js/Slideshow.js"></script>
+		<script src="js/canvasPad.js"></script>
+		<script src="js/SideMenu.js"></script>
+		<script src="js/Booking.js"></script>
+		<script src="js/StationsMap.js"></script>
+		<script src="js/js.js"></script>
+		<script src="js/markerclusterer.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHwUgu535TYCYi1H5KUT_YUxMUca3X41g&callback=initMap" async defer></script>
+
+
+	</body>
+</html>

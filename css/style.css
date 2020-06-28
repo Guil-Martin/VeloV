@@ -1,0 +1,322 @@
+@font-face { font-family: 'Roboto'; src: url('../fonts/Roboto-Regular.ttf') }
+
+/* ===== HEADER / MENU ===== */
+
+* { box-sizing: border-box; }
+
+html, body {
+	background-color: black;
+	height:100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+header {
+	height: 10%;
+	padding: 3px;
+	min-height: 60px;
+	display: flex;
+	background-color: white;
+	align-items: center;
+	justify-content: space-between;
+}
+#logoBox {  }
+#logoBox img { height: 100%; width: 100%; padding: 5px; }
+#logoLyonBox {  }
+#logoLyonBox img { height: 100%; width: 100%; padding: 5px; }
+
+/* ===== SLIDESHOW ===== */
+#slideshowBox { width: 50%; height: 35%; margin: auto; }
+.slideshow-container { width: 100%; height: 100%; position: relative; }
+.slideshow-container img { width: 100%; height: 100%; }
+.slides { width: 100%; height: 100%; }
+
+
+.slideshow-buttons {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	/*padding: 12px;*/
+}
+
+.prev, .next, .pause {
+	cursor: pointer;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+}
+
+/*.prev:hover, .next:hover, .pause:hover { background-color: rgba(255,255,255,0.8); }*/
+
+.prev:active, .next:active { background-color: grey }
+
+.text {
+	color: #f2f2f2;
+	font-size: 16px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+.numbertext {
+	width: 100%;
+	padding: 8px 12px;
+	position: absolute;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black;
+	text-align: center;
+	top: 0;
+}
+
+/* ===== MAP ===== */
+#mapWrapper {
+	width: 100%;
+	height: 45%;
+	/*z-index: 1;*/
+	background-color: grey;
+	position: relative;
+}
+#mapBox { width: 100%; height: 100%; background-color: grey; }
+
+#sideMenuWrapper {}
+#sideMenu {
+	width: 35%;
+	height: 100%;
+	min-width: 200px;
+	top: 0; 
+	left: 0;
+	display: none;
+	flex-direction: column;
+	position: fixed;
+	z-index: 10;
+	background-color: white;
+	align-items: center;
+	justify-content: space-between;
+	transform: translateX(-100%);
+	transition: transform .2s ease-out;
+}
+#sideMenuWrapper .slideAnimation { /* Side menu */
+	transform: translateX(0);
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, .2);
+}
+
+#sideMenuClose {
+	width: 20px;
+	font-weight: bold;
+	font-size: 34px;
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	cursor: pointer;
+}
+#nameAdressWrapper {
+	width: 100%;
+	padding: 20px 0 20px 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .2);
+}
+#stationName { font-weight: bold; }
+#stationAddress { font-size: 0.8em; }
+#stationStatus { font-weight: bold; font-size: 1.5em;}
+#stationStandsInfoWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+#stationStandsWrapper {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+#stationStandsImgWrapper {
+	display: flex;
+	justify-content: space-around;
+}
+#stationStandsFree, #stationBikeFree {
+	color: rgb(225, 31, 38);
+	font-weight: bold;
+	font-size: 2.2em;
+}
+#stationButtonWrapper {
+	width: 100%;
+	padding-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#stationButton {
+	z-index: 1;
+	width: 200px;
+	padding: 10px;
+	cursor: pointer;
+	border: 3px black solid;
+	font-weight: bold;
+	font-size: 20px;
+}
+#stationButton:active {
+	background-color: grey
+}
+#bookError {
+	display: none;
+	width: 60%;
+	padding: 10px;
+	text-align: center;
+	background-color: white;
+	color: rgb(225, 31, 38);
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* Signature canvas */
+
+#bookNameBox {
+	width: 200px;
+	padding-bottom: 14px;
+}
+
+#bookNameBox div:first-child input {
+	/*display: flex;*/
+	border: 1px black solid;
+	width: 100%;
+}
+#bookNameBox div:last-child input {
+	/*display: flex;*/
+	border: 1px black solid;
+	width: 100%;
+}
+
+#signBox {
+	width: 200px;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	/*position: absolute;*/
+	/*left: 0;*/
+	/*bottom: 100%;*/
+/*	z-index: 55 !important;*/
+}
+#signBtnBox {
+	width: 200px;
+/*	height: 25%;*/
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+}
+#validBtn, #closeBtn { 
+	width: 50%;  
+	height: 50px;
+	border: none; 
+	padding: 0; 
+	font-weight: bold; 
+	border: 3px black solid;
+}
+#validBtn {
+	background-color: green;
+	font-size: 20px;
+}
+#closeBtn {
+	background-color: red;
+	font-size: 28px;
+}
+
+#validBtn:hover, #closeBtn:hover { background-color: rgba(0,0,0,0.2); }
+/*
+#validBtn img, #closeBtn img { width: 100%;	height: 100%; }
+#validBtn img { padding: 4px 2px 4px 4px; }
+#closeBtn img { padding: 4px 4px 4px 2px; }
+*/
+
+#signCanvas {
+	width: 100%;
+	height: 75%;
+
+	/*width: 300px;
+	height: 300px;*/
+
+/*	border: rgb(225, 31, 38) 4px solid; */
+	background-color: white;
+	bottom: 100%; 
+	box-shadow: 0px -10px 5px rgba(0, 0, 0, .2), -10px 0px 5px rgba(0, 0, 0, .2), 10px 0px 5px rgba(0, 0, 0, .2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+	height: 10%;
+	min-height: 50px;
+	font-size: 1.0em;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+footer p {
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+#bookedBox { display: flex; color: white; line-height: 20px; }
+#bookedStation { padding: 0 10px 0 10px; cursor: pointer; }
+#bookedTimer { padding: 0 10px 0 10px; }
+
+#bookedBarBox {
+	display: flex;
+}
+#bookedBar {
+	width: 100px;
+	height: 20px;
+	background-color: white;
+	overflow: hidden;
+}
+#bookedBarProgress {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(225, 31, 38);
+}
+#bookedCancel {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	padding: 0;
+	background-color: red;
+	margin-left: 10px;
+	border: none;
+	font-size: 10px;
+}
+#bookedCancel img {	width: 100%; height: 100%; }
+
+button { outline: none; }
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (min-width: 2048px) {
+	#sideMenu { width: 20%; }
+	#slideshowBox { width: 30%; }
+	footer { font-size: 1.1em; }
+}
+@media screen and (max-width: 1024px) {
+	#sideMenu { width: 45%; }
+	footer { font-size: 0.8em; }
+}
+@media screen and (max-width: 640px) {
+	#sideMenu { width: 70%; }
+	#slideshowBox { width: 100%; }
+	#logoLyonBox { display: none; }
+	#logoBox { height: 100% }
+	header { display: block; padding: 6px 50px;	}
+	footer { font-size: 0.6em; }
+}
+@media screen and (max-width: 481px) {
+	#sideMenu { width: 100% }
+	#bookedBox { display: flex; flex-direction: column; align-items: center; line-height: 10px; }
+	footer { font-size: 0.5em; }
+}
