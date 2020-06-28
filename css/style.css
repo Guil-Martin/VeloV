@@ -264,6 +264,12 @@ footer p {
 	text-align: center;
 	margin: 0;
 }
+footer a {
+	text-decoration: none;
+}
+footer a:link, footer a:visited {
+	color: rgb(153, 255, 102);
+}
 
 #bookedBox { display: flex; color: white; line-height: 20px; }
 #bookedStation { padding: 0 10px 0 10px; cursor: pointer; }
